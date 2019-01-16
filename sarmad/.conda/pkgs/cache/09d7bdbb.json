@@ -1,0 +1,12 @@
+{
+  "_mod": "Wed, 16 May 2018 14:54:27 GMT", 
+  "_url": "https://conda.anaconda.org/wakari/noarch", 
+  "info": {
+    "arch": null, 
+    "default_numpy_version": "1.7", 
+    "default_python_version": "2.7", 
+    "platform": null, 
+    "subdir": "noarch"
+  }, 
+  "packages": {}
+}

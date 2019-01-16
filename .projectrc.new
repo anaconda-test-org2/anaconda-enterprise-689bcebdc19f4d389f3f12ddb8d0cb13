@@ -1,0 +1,41 @@
+####################################################################
+# This is the project RC
+# This file is sourced when you open an app in wakari
+
+# The following environment variables will be exported by wakari
+# for use in this script and the application
+#
+# WAKARI_PROJECT_HOME:  The directory where the project lives
+# WAKARI_PROJECT_OWNER: The username of the owner of this project
+# WAKARI_PROJECT_NAME:  The name of this project
+# WAKARI_APPLICATION:   The name of the application that will be launched
+#
+####################################################################
+
+## Don't Modify these lines, reserved for wk-compute use only
+
+# Export CONDA_ENVS_PATH so that conda create adds
+# the env to the project by default
+export CONDA_ENVS_PATH=$WAKARI_PROJECT_HOME/envs:${CONDA_ENVS_PATH:-DEFAULTS}
+export CONDA_PKGS_DIRS=$ANACONDA_ROOT/pkgs,${WAKARI_PROJECT_HOME}/${USER}/.conda/pkgs
+
+# Define shell prompt:
+export PS1="[\u@\h \W]\$ "
+
+# Another approach only used with conda 4.2.9 (AEN 4.1.0 and 4.1.1)
+# echo "envs_dirs: [$WAKARI_PROJECT_HOME/envs]" > $WAKARI_PROJECT_HOME/.condarc
+# export CONDARC=$WAKARI_PROJECT_HOME/.condarc
+
+export WAKARI_PROJECT_ENV=/projects/sarmad/name/envs/default
+
+if [ -n "${PROJ_DIRS_AS_HOME}" ]; then
+    export WAKARI_OWNER_HOME=`dirname ${WAKARI_PROJECT_HOME}`
+    export HOME=`dirname ${WAKARI_OWNER_HOME}`"/${USER}"
+fi
+
+if [ -d "$WAKARI_PROJECT_ENV" ]
+  then
+    source activate $WAKARI_PROJECT_ENV
+fi
+
+## Add user defined functions below

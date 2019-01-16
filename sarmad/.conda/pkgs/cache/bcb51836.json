@@ -1,0 +1,42 @@
+{
+  "_mod": "Tue, 21 Aug 2018 23:26:28 GMT", 
+  "_url": "https://conda.anaconda.org/r/noarch", 
+  "info": {
+    "arch": null, 
+    "default_numpy_version": "1.7", 
+    "default_python_version": "2.7", 
+    "platform": null, 
+    "subdir": "noarch"
+  }, 
+  "packages": {
+    "r-mrclient-mlm-3.4.3-mro343_0.tar.bz2": {
+      "arch": null, 
+      "binstar": {
+        "channel": "main", 
+        "owner_id": "52c5dc11f53f2a0b1a9de428", 
+        "package_id": "5a9585f7c425e111c3877018"
+      }, 
+      "build": "mro343_0", 
+      "build_number": 0, 
+      "depends": [
+        "mro-base 3.4.3.*", 
+        "r-mrclient-mml >=3.4.3,<3.4.4.0a0"
+      ], 
+      "has_prefix": false, 
+      "license": "Proprietary", 
+      "license_family": "Proprietary", 
+      "machine": null, 
+      "md5": "8d4a9c114c9741e2990d39b83834ec90", 
+      "name": "r-mrclient-mlm", 
+      "noarch": "generic", 
+      "operatingsystem": null, 
+      "platform": null, 
+      "requires": [], 
+      "size": 539643200, 
+      "subdir": "noarch", 
+      "target-triplet": "None-any-None", 
+      "timestamp": 1519727474730, 
+      "version": "3.4.3"
+    }
+  }
+}
